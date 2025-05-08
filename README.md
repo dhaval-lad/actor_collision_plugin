@@ -14,6 +14,14 @@ The `actor_collision_plugin` is a ROS2 package for enabling collision for moving
     cd ~/ros2_ws
     colcon build --packages-select actor_collision_plugin
     ```
+3. Add the plugin to GAZEBO_PLUGIN_PATH by adding following line at the end of the `.bashrc`file. (replace `ros2_ws` with the name of your ROS 2 workspace):
+    ```
+    export GAZEBO_PLUGIN_PATH=$GAZEBO_PLUGIN_PATH:~/ros2_ws/build/actor_collision_plugin
+    ```
+4. Source your `.bashrc` file:
+    ```
+    source ~/.bashrc
+    ```
 
 ## Referance Used
 - [gazebo_plugin_actor_collision](https://github.com/LCAS/iliad/tree/master/gazebo_plugin_actor_collision)
